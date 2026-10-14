@@ -1,1 +1,0 @@
-# cek-resi-spx
