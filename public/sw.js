@@ -1,8 +1,8 @@
-const CACHE_NAME = 'spx-tracker-v1';
+const CACHE_NAME = 'spx-tracker-pages-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.json',
+  './',
+  './index.html',
+  './manifest.json',
   'https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js'
 ];
 
@@ -25,12 +25,6 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // API selalu dari network
-  if (event.request.url.includes('/api/')) {
-    event.respondWith(fetch(event.request));
-    return;
-  }
-
   event.respondWith(
     caches.match(event.request)
       .then((response) => response || fetch(event.request))
