@@ -2,7 +2,7 @@
   "name": "Cek Resi SPX Express",
   "short_name": "SPX Tracker",
   "description": "Cek resi SPX Express dengan scan barcode & history",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#ee4d2d",
   "theme_color": "#ee4d2d",
